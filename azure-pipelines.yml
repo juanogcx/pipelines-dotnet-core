@@ -30,3 +30,11 @@ steps:
     artifactName: 'myWebsiteName'
 
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(f435f253-2fa4-4c76-ac7b-0b85119bb778)'
+    appName: 'OrdeniaWeb'
+    appType: 'webApp'
+    package: $(Build.ArtifactStagingDirectory)/**/*.zip
+
+
